@@ -1,0 +1,325 @@
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  background: #21201f;
+}
+header .main-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0.5rem 2rem;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1000px;
+  margin: 0 auto;
+}
+header .main-header p {
+  color: #fff;
+  font-family: "Grenze Gotisch", cursive;
+  font-size: 1.6rem;
+}
+header .main-header a {
+  text-decoration: none;
+  font-size: 4rem;
+  font-family: "Dancing Script", cursive;
+  text-shadow: 3px 3px 5px #000;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  color: #ef6817;
+}
+header .main-header a span {
+  font-size: 7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+header .main-header a:hover {
+  text-shadow: 5px 3px 3px #383838;
+}
+header .main-header .icono-tienda a img {
+  width: 3rem;
+  height: 3rem;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+header .nav-header nav {
+  margin: 0;
+  padding: 2rem;
+  padding-top: 0.2rem;
+  width: 1000px;
+  margin: 0 auto;
+}
+header .nav-header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .nav-header nav ul li a {
+  margin: 0;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  color: #fff;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  border: 4px solid #21201f;
+  border-radius: 5px;
+  border-top-color: #21201f;
+  border-bottom-color: #21201f;
+  padding: 1rem;
+  transition: 0.3s ease-in-out;
+}
+header .nav-header nav ul li a:hover {
+  border-top-color: #727271;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  border-bottom-color: #727271;
+  border-radius: 20%;
+}
+
+.hero {
+  background-image: url(../assets/img/img3.png);
+  background-position: center center;
+  background-size: cover;
+  height: 550px;
+  display: block;
+  position: relative;
+}
+.hero .wave-hero {
+  position: absolute;
+  top: -5px;
+  width: 100%;
+}
+.hero .main-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10rem;
+  position: relative;
+}
+.hero .main-title h1 {
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  position: absolute;
+  top: 150px;
+  font-family: "Dancing Script", cursive;
+  text-transform: capitalize;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+}
+.hero .whitewave {
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+}
+.hero .shadow-boot {
+  height: 8rem;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(rgba(225, 225, 225, 0.01)));
+  background: linear-gradient(0deg, #fff, rgba(225, 225, 225, 0.01));
+  margin: 0;
+}
+
+.textod {
+  background: -webkit-linear-gradient(#efb810, #ffbf00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: tomato;
+}
+
+.face1 {
+  position: relative;
+  background: #21201f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #727271;
+  z-index: 1;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+.face1 .content {
+  font-size: 2.5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.face1 .content h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+.face2 {
+  position: relative;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+.face2 .content p {
+  margin: 0;
+  padding: 0;
+}
+
+.more-info {
+  text-align: center;
+  background: #727271;
+  margin: 0;
+}
+.more-info h2 {
+  padding: 2rem;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+}
+.more-info h2 span {
+  font-weight: 800;
+}
+.more-info .container-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1200px;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+}
+.more-info .container-info .card {
+  position: relative;
+}
+.more-info .container-info .card .face {
+  width: 250px;
+  height: 200px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.more-info .container-info .card:hover .face.face1 {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  background: #ef6817;
+  color: #000;
+}
+.more-info .container-info .card:hover .face .face1.content {
+  opacity: 1;
+  color: #000;
+}
+.more-info .container-info .card:hover .face.face2 {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.citas {
+  background-image: url(../assets/img/young-woman-with-blue-hair-pointing-with-finger-aside.jpg);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+}
+.citas h3 {
+  color: #fff;
+  text-align: center;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+}
+.citas-form {
+  background: #fff;
+  border-radius: 5px;
+  width: 50%;
+  margin: 2rem;
+  margin-top: 4rem;
+  padding: 2rem;
+  text-align: center;
+}
+.citas-form h4 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  color: #ef6817;
+  padding-bottom: 2rem;
+}
+.citas-form form .campo {
+  padding: 1rem;
+}
+.citas-form form .campo input, .citas-form form .campo select {
+  width: 100%;
+  height: 40px;
+  text-transform: capitalize;
+  font-size: 1rem;
+  padding-left: 1rem;
+  font-family: "Oswald", sans-serif;
+  border-radius: 5px;
+  background: none;
+  color: #000;
+  border: inherit;
+  border-bottom: 2px solid #ef6817;
+}
+.citas-form form input[type=submit] {
+  width: 50%;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 2rem;
+  padding-left: 1rem;
+  font-family: "Oswald", sans-serif;
+  border-radius: 5px;
+  background: none;
+  color: #727271;
+  border: 2px solid #727271;
+  margin-top: 2rem;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.citas-form form input[type=submit]:hover {
+  background: #ef6817;
+  color: #fff;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=main.css.map */

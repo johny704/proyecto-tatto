@@ -1,0 +1,350 @@
+$color1: #000;
+$color2: #fff;
+$color3: #ef6817;
+$color4: #21201f;
+$color5: #727271;
+$color6: #5f605d;
+$color7: #383838;
+$color8: rgba(0, 0, 0, 0.5) ;
+$color9: rgba(225, 225, 225, 0.2) ;
+ 
+$font1: 'Dancing Script', cursive;
+$font2: 'Grenze Gotisch', cursive;
+$font3: 'Oswald', sans-serif;
+
+@mixin parallax($url, $height, $attach, $posit, $repeat,$size){
+    background-image: url($url);
+    height: $height;
+    background-attachment: $attach;
+    background-position: $posit;
+    background-repeat: $repeat;
+    background-size: $size; 
+}
+
+@mixin display ($tipo, $justify, $align){
+    display: $tipo;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+header{
+    background: $color4;
+    
+    
+    .main-header{
+        display: flex;
+        justify-content: space-around ;
+        padding: .5rem 2rem;
+        align-content: center;
+        align-items: center;
+        width: 1000px;
+        margin: 0 auto;
+        p{
+            color: $color2;
+            font-family: $font2;
+            font-size: 1.6rem;
+        }
+        a{
+            text-decoration: none;
+            font-size: 4rem;
+            font-family: $font1;
+    
+            text-shadow: 3px 3px 5px $color1;
+            transition: 0.3s ease-in-out;
+            color: $color3;
+          
+            span{
+                font-size: 7rem;
+                text-transform: uppercase;
+                letter-spacing: 0.2px;
+
+            }
+            &:hover{
+               text-shadow: 5px 3px 3px $color7;
+            }
+
+        }
+        .icono-tienda{
+            a{
+                img{
+                    width: 3rem;
+                    height: 3rem;
+                    filter: invert(100%);
+                    
+                   
+                }
+            }
+        }
+    }
+    .nav-header{
+        nav{
+            
+            margin: 0;
+            padding: 2rem;
+            padding-top: 0.2rem;
+            width: 1000px;
+            margin: 0 auto;
+
+
+            ul{
+                @include display(flex, space-between, center);
+                li{
+                    a{
+                        margin: 0;
+                        text-decoration: none;
+                        font-family: $font3;
+                        font-weight: 200;
+                        color: $color2;
+                        font-size: 1.6rem;
+                        text-transform: capitalize;
+                        transition: 0.3s ease-in-out;
+                        border: 4px solid $color4;
+                        border-radius: 5px;
+                        border-top-color: $color4;
+                        border-bottom-color: $color4;
+                        padding: 1rem;
+                        transition: .3s ease-in-out;
+                        
+                        &:hover{
+                            
+                            border-top-color: $color5;
+                            animation: spin 1s linear infinite;
+                            border-bottom-color: $color5;
+                            border-radius: 20%;
+                            
+                            
+                        }
+                    }
+
+                }
+            }
+          
+        }
+    }
+}
+
+.hero{
+    background-image: url(../img/img3.png);
+    
+    
+    background-position: center center;
+    background-size: cover;
+    height:550px;
+    display: block;
+    position: relative;
+
+    .wave-hero{
+        position: absolute;
+        top: -5px;
+        width: 100%;
+    }
+
+    .main-title{
+        @include display(flex,center ,center );
+        font-size: 10rem;
+        position: relative;
+        h1{
+            transform: rotate(-7deg);
+            position: absolute;
+            top: 150px;
+            font-family: $font1;
+            text-transform: capitalize;
+            color: $color2;
+            background: $color8;
+            padding: 3rem;
+
+        }
+    }
+    
+
+    .whitewave{
+        position: absolute;
+        bottom: -5px;
+        width: 100%;
+
+
+
+    }
+
+    
+    
+    .shadow-boot{
+        height: 8rem;
+        width: 100%;
+        background: linear-gradient(0deg, $color2, rgba(225,225,225,0.01 ));
+        margin: 0;
+    }
+}
+.textod {
+    background: -webkit-linear-gradient(#efb810,#ffbf00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+      color: tomato;
+ }
+
+.face1{
+    position: relative;
+    background: $color4;
+    @include display(flex, center, center);
+    color: $color5;
+    z-index: 1;
+    transform: translateY(100px);
+    
+    .content{
+        font-size: 2.5rem;
+        transition: 0.5s;
+        h3{
+            font-family: $font3;
+        }
+    }
+}                                                 
+.face2{
+    position: relative;
+    background: $color2;
+    @include display(flex, center, center);
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+    .content{
+        p{
+            margin: 0;
+            padding: 0;
+        }
+        
+    }
+}
+
+.more-info{
+    text-align: center;
+    background: $color5;
+    margin: 0;
+    
+    h2{
+        padding: 2rem;
+        text-transform: uppercase;
+        font-size: 3rem;
+        font-family: $font3;
+        span{
+            font-weight: 800;
+        }
+    }
+    .container-info{
+        @include display(flex, space-around, center);
+        max-width: 1200px;
+        padding-bottom: 2rem;
+        margin: 0 auto;
+        .card{
+            position: relative;
+            .face{
+                width: 250px;
+                height: 200px;
+                transition: 0.5s;
+                
+            }
+            &:hover .face.face1{
+                transform: translateY(0);
+                background: $color3;
+                color: $color1;
+            }
+            &:hover .face .face1.content{
+                opacity: 1;
+                color: $color1;
+            }
+
+            &:hover .face.face2{
+                transform: translateY(0);
+            }
+        }
+    }
+}
+.citas{
+    background-image: url(../img/young-woman-with-blue-hair-pointing-with-finger-aside.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    h3{
+        color: $color2;
+        text-align: center;
+        transform: rotate(-7deg);
+        font-size: 2rem;
+        font-family: $font3;
+        text-transform: uppercase;
+        font-weight: 400;
+        position: relative;
+        
+        
+    }
+    &-form{
+        background: $color2;
+        border-radius: 5px;
+        width: 50%;
+        margin: 2rem;
+        margin-top: 4rem;
+        padding: 2rem;
+        text-align: center;
+        h4{
+            font-family: $font3;
+            font-size: 2rem;
+            color: $color3;
+            padding-bottom: 2rem;
+        }
+        form{
+            .campo{
+                padding: 1rem;
+                input, select{
+                    width: 100%;
+                    height: 40px;
+                    text-transform: capitalize;
+                    font-size: 1rem;
+                    padding-left: 1rem;
+                    font-family: $font3;
+                    border-radius: 5px;
+                    background: none;
+                    color: $color1;
+                    border: inherit;
+                    border-bottom: 2px solid $color3;
+                    
+                }
+
+                
+            }
+            input[type=submit]{
+                width: 50%;
+                font-weight: 400;
+                text-transform: capitalize;
+                font-size: 2rem;
+                padding-left: 1rem;
+                font-family: $font3;
+                border-radius: 5px;
+                background: none;
+                color: $color5;
+                border: 2px solid $color5;
+                margin-top: 2rem;
+                transition: .3s ease-in-out;
+                &:hover{
+                    background: $color3;
+                    color: $color2;
+                }
+            }
+        }
+    }
+  
+}
+
+
+
+
+
+
+
+.parallax{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
